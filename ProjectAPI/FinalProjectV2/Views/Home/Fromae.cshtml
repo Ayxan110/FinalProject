@@ -1,0 +1,624 @@
+﻿@model FinalProjectV2.Data.ViewModel
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script src="https://kit.fontawesome.com/92d6f9ab3e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header id="hd-part">
+        <div class="container">
+            <div id="ah">
+                <div class="hd-1 row">
+                    <div class="hd-1-left col-md-6">
+                        <ul>
+                            <li>
+                                @{
+                                    foreach (var item in Model.Contacts)
+                                    {
+                                        <a href='#'><i class='fas fa-mobile-alt'></i>@item.PhoneNumber</a>;
+                                    }
+                                }
+                            </li>
+                            <li><a href="#"><i class="far fa-life-ring"></i> Yardım Mərkəzi</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sifarişi izləmək</a></li>
+                            <li><a href="#"><i class="far fa-bell"></i> Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd-1-right col-md-6">
+                        <ul id="asasas">
+                            <li><img src="~/img/az_payment_methods.png" alt=""></li>
+                            <li>
+                                <select class="form-control" id="languages">
+                                    <option value="AZ">azərbaycan</option>
+                                    <option value="RU">русский</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div id="uff">
+                <div class="hd-2 row">
+                    <div class="hd-2-logo col-md-2">
+                        <div>
+                            <img src="~/img/logo.png" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="hd-2-search col-md-8">
+                        <input placeholder="Search for products, categories ..." type="text">
+                    </div>
+                    <div class="hd-2-shop col-md-2">
+                        <ul>
+                            <li>
+                                <a class="btn" href="#open-modal">
+                                    <i class="far fa-user-circle"></i>
+                                </a>
+                                <div id="open-modal" class="modal-window">
+                                    <div>
+                                        <a href="#" title="Close" class="modal-close">X</a>
+                                        <h5>Daxil ol</h5>
+                                        <div class="form-group">
+                                            <p>E-mail adresi <span>*</span></p>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <p>Şifrə <span>*</span></p>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <button class="btn-default">Daxil ol</button>
+                                        <p id="fgd">Qeydiyyatdan keçməmisiniz? <a href="register.html">Dərhal keçin!</a></p>
+                                    </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-shopping-cart"></i>
+                            </li>
+                            <li><i class="far fa-comment-dots"></i></li>
+                        </ul>
+                    </div>
+                    <div id="hd-search-ico">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid hidish">
+            <div class="ihh">
+                <div class="hd-3 row">
+                    <ul>
+                        @{
+                            foreach (var item in Model.Categories)
+                            {
+                                <li>@item.Name</li>;
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="advertisements container-fluid">
+            <div class="carousel-part row">
+            </div>
+        </div>
+    </section>
+    <main class="container">
+        <div class="main-hd">
+            <ul>
+                <li>ƏN ÇOX SATILANLAR</li>
+                <li>YENİ MƏHSULLAR</li>
+                <li>ƏN ÇOX BAXILANLAR</li>
+                <li>ENDİRİMLƏR</li>
+            </ul>
+        </div>
+        <div class="product-part row">
+            @{
+
+            }
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+            <div class="product-box col-md-3">
+                <div class="prp">
+                    <div class="product-img">
+                        <img src="551.jpg" alt="photo">
+                    </div>
+                    <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                    <ul>
+                        <li><strike>$ 1.914</strike></li>
+                        <li>$ 1.914</li>
+                    </ul>
+                    <p class="product-percent">18%</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="container ahet">
+        <div class="row">
+            <div class="ahet-nav col-md-4">
+                <div class="ahet-hd">
+                    <h5>Televizorlar</h5>
+                </div>
+                <ul>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container ahet">
+        <div class="row">
+            <div class="ahet-nav col-md-4">
+                <div class="ahet-hd">
+                    <h5>Televizorlar</h5>
+                </div>
+                <ul>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container ahet">
+        <div class="row">
+            <div class="ahet-nav col-md-4">
+                <div class="ahet-hd">
+                    <h5>Televizorlar</h5>
+                </div>
+                <ul>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                    <li>Samsung</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                    <div class="product-box col-md-3">
+                        <div class="prp">
+                            <div class="product-img">
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                            <p class="product-wrt">Samsung Galaxy Z Flip SM-F700F/DS</p>
+                            <ul>
+                                <li><strike>$ 1.914</strike></li>
+                                <li>$ 1.914</li>
+                            </ul>
+                            <p class="product-percent">18%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="ft-part container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <h4>Istifadəçilərə</h4>
+                <ul>
+                    <li><a href="#">Sifarişlərim</a></li>
+                    <li><a href="#">Hesabım</a></li>
+                    <li><a href="#">Xəbərlərim</a></li>
+                    <li><a href="#">Zəmanət</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h4>Informasiya</h4>
+                <ul>
+                    <li><a href="">Haqqımızda</a></li>
+                    <li><a href="">Bizimlə əlaqə</a></li>
+                    <li><a href="">Çatdırılma</a></li>
+                    <li><a href="">Ödənişlər</a></li>
+                    <li><a href="">Göndərmə qaydaları</a></li>
+                    <li><a href="">Məxfilik siyasəti</a></li>
+                    <li><a href="">Xidmət şərtələri</a></li>
+                    <li><a href="">Sifarış və geri qaytarma</a></li>
+                    <li><a href="">Sual Cavab?</a></li>
+                    <li><a href="">Axtarış</a></li>
+                </ul>
+            </div>
+            <div class="ft-info col-md-3">
+                <h4>Əlaqə məlumatı</h4>
+                <ul>
+                    <li><i class="far fa-envelope"></i> Email: <a href="#">aykhanzd@code.edu.az</a></li>
+                    <li><i class="fas fa-mobile-alt"></i>  Mobil: <a href="#">+99455 655 05 11</a></li>
+                </ul>
+            </div>
+            <div class="ft-sub col-md-4">
+                <h4>Yeniliklər</h4>
+                <p>Yeniliklərə Abunə Ol:</p>
+                <div class="form-group">
+                    <input placeholder="Email ünvanınızı daxil edin" class="form-control" type="text">
+                    <button class="btn-default">Abunə ol</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="socials">
+                <ul>
+                    <li>
+                        <div>
+                            <img src="google.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="facebook.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="facebook.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="facebook.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="facebook.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+</body>
+
+</html>
