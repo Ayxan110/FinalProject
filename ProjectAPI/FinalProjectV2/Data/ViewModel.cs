@@ -1,4 +1,5 @@
-﻿using ProjectAPI.Data.Entities;
+﻿using FinalProjectV2.Data.Entities;
+using ProjectAPI.Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,5 +15,7 @@ namespace FinalProjectV2.Data
         public IEnumerable<SubCategoryItem> SubCategoryItems { get; set; }
         public IEnumerable<Social> Socials { get; set; }
         public IEnumerable<Contact> Contacts { get; set; }
+        public IEnumerable<Photo> Photos { get; internal set; }
+        public IEnumerable<News> News { get; set; }
     }
 }

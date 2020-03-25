@@ -1,45 +1,213 @@
-﻿<!DOCTYPE html>
+﻿@model FinalProjectV2.Data.ViewModel
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FinalProjectV2</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/style2.css" />
+    <script src="https://kit.fontawesome.com/92d6f9ab3e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FinalProjectV2</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+    <header id="hd-part">
+        <div class="container">
+            <div id="ah">
+                <div class="hd-1 row">
+                    <div class="hd-1-left col-md-6">
+                        <ul>
+                            @{
+                                foreach (var item in Model.Contacts)
+                                {
+                                    <li><a href='#'><i class='fas fa-mobile-alt'></i>@item.PhoneNumber</a></li>
+                                }
+                            }
+                            <li><a href="#"><i class="far fa-life-ring"></i> Yardım Mərkəzi</a></li>
+                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sifarişi izləmək</a></li>
+                            <li><a href="#"><i class="far fa-bell"></i> Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd-1-right col-md-6">
+                        <ul id="asasas">
+                            <li><img src="~/img/az_payment_methods.png" alt=""></li>
+                            <li>
+                                <select class="form-control" id="languages">
+                                    <option value="AZ">azərbaycan</option>
+                                    <option value="RU">русский</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="uff">
+                <div class="hd-2 row">
+                    <div class="hd-2-logo col-md-2">
+                        <div>
+                            <img src="~/img/logo.png" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div class="hd-2-search col-md-8">
+                        <input placeholder="Search for products, categories ..." type="text">
+                    </div>
+                    <div class="hd-2-shop col-md-2">
+                        <ul>
+                            <li>
+                                <a class="btn" href="#open-modal">
+                                    <i class="far fa-user-circle"></i>
+                                </a>
+                                <div id="open-modal" class="modal-window">
+                                    <div>
+                                        <a href="#" title="Close" class="modal-close">X</a>
+                                        <h5>Daxil ol</h5>
+                                        <div class="form-group">
+                                            <p>E-mail adresi <span>*</span></p>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <p>Şifrə <span>*</span></p>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <button class="btn-default">Daxil ol</button>
+                                        <p id="fgd">Qeydiyyatdan keçməmisiniz? <a asp-action="register" asp-controller="home">Dərhal keçin!</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-shopping-cart"></i>
+                            </li>
+                            <li><i class="far fa-comment-dots"></i></li>
+                        </ul>
+                    </div>
+                    <div id="hd-search-ico">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid hidish">
+            <div class="ihh">
+                <div class="hd-3">
+                    <ul class="hover">
+                        @{
+                            foreach (var item in Model.Categories)
+                            {
+                                <li>@item.Name</li>
+                            }
+                        }
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - FinalProjectV2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+        <div class="container hover-menu">
+            <div class="row">
+                <div class="subcategories col-md-4">
+                    <ul>
+                        <li class="subcategory">Telefon</li>
+                        <li class="subcategory">Mobil aksessuarlar</li>
+                        <li class="subcategory">TV və audio</li>
+                    </ul>
+                </div>
+                <div class="subcategoryitems col-md-8">
+                    <div class="row">
+                        <div class="subcategoryitem col-md-3">
+                            <p class="subcategoryitemname">Iphone</p>
+                            <div>
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                        </div>
+                        <div class="subcategoryitem col-md-3">
+                            <p class="subcategoryitemname">Samsung</p>
+                            <div>
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                        </div>
+                        <div class="subcategoryitem col-md-3">
+                            <p class="subcategoryitemname">Nokia</p>
+                            <div>
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                        </div>
+                        <div class="subcategoryitem col-md-3">
+                            <p class="subcategoryitemname">Huawei</p>
+                            <div>
+                                <img src="551.jpg" alt="photo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+            @RenderBody()
+<footer class="ft-part container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <h4>Istifadəçilərə</h4>
+            <ul>
+                <li><a href="#">Sifarişlərim</a></li>
+                <li><a href="#">Hesabım</a></li>
+                <li><a href="#">Xəbərlərim</a></li>
+                <li><a href="#">Zəmanət</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>Informasiya</h4>
+            <ul>
+                <li><a href="">Haqqımızda</a></li>
+                <li><a href="">Bizimlə əlaqə</a></li>
+                <li><a href="">Çatdırılma</a></li>
+                <li><a href="">Ödənişlər</a></li>
+                <li><a href="">Göndərmə qaydaları</a></li>
+                <li><a href="">Məxfilik siyasəti</a></li>
+                <li><a href="">Xidmət şərtələri</a></li>
+                <li><a href="">Sifarış və geri qaytarma</a></li>
+                <li><a href="">Sual Cavab?</a></li>
+                <li><a href="">Axtarış</a></li>
+            </ul>
+        </div>
+        <div class="ft-info col-md-3">
+            <h4>Əlaqə məlumatı</h4>
+            <ul>
+                @{
+                    foreach (var item in Model.Contacts)
+                    {
+                        <li><i class="far fa-envelope"></i> Email: <a href="#">@item.Email</a></li>
+                        <li><i class="fas fa-mobile-alt"></i>  Mobil: <a href="#">@item.PhoneNumber</a></li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="ft-sub col-md-4">
+            <h4>Yeniliklər</h4>
+            <p>Yeniliklərə Abunə Ol:</p>
+            <div class="form-group">
+                <input placeholder="Email ünvanınızı daxil edin" class="form-control" type="text">
+                <button class="btn-default">Abunə ol</button>
+            </div>
+        </div>
+    </div>
+    @*<div class="row">
+        <div class="socials">
+            <ul>
+                @{
+                    foreach (var item in Model.Socials)
+                    {
+                        <li>
+                            <div>
+                                <img src="~img/@item.Photo" alt="photo">
+                            </div>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>*@
+</footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,0 +1,244 @@
+﻿@model List<ProjectAPI.Data.Entities.Product>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/style2.css">
+    <script src="https://kit.fontawesome.com/92d6f9ab3e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="~/js/img.js"></script>
+
+</head>
+<header id="hd-part">
+    <div class="container">
+        <div id="ah">
+            <div class="hd-1 row">
+                <div class="hd-1-left col-md-6">
+                    <ul>
+                        <li><a href='#'><i class='fas fa-mobile-alt'></i>+99455 655 0511</a></li>
+                        <li><a href="#"><i class="far fa-life-ring"></i> Yardım Mərkəzi</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Sifarişi izləmək</a></li>
+                        <li><a href="#"><i class="far fa-bell"></i> Blog</a></li>
+                    </ul>
+                </div>
+                <div class="hd-1-right col-md-6">
+                    <ul id="asasas">
+                        <li><img src="~/img/az_payment_methods.png" alt=""></li>
+                        <li>
+                            <select class="form-control" id="languages">
+                                <option value="AZ">azərbaycan</option>
+                                <option value="RU">русский</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="uff">
+            <div class="hd-2 row">
+                <div class="hd-2-logo col-md-2">
+                    <div>
+                        <img src="~/img/logo.png" alt="" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="hd-2-search col-md-8">
+                    <input placeholder="Search for products, categories ..." type="text">
+                </div>
+                <div class="hd-2-shop col-md-2">
+                    <ul>
+                        <li>
+                            <a class="btn" href="#open-modal">
+                                <i class="far fa-user-circle"></i>
+                            </a>
+                            <div id="open-modal" class="modal-window">
+                                <div>
+                                    <a href="#" title="Close" class="modal-close">X</a>
+                                    <h5>Daxil ol</h5>
+                                    <div class="form-group">
+                                        <p>E-mail adresi <span>*</span></p>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Şifrə <span>*</span></p>
+                                        <input class="form-control" type="text">
+                                    </div>
+                                    <button class="btn-default">Daxil ol</button>
+                                    <p id="fgd">Qeydiyyatdan keçməmisiniz? <a href="register.html">Dərhal keçin!</a></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-shopping-cart"></i>
+                        </li>
+                        <li><i class="far fa-comment-dots"></i></li>
+                    </ul>
+                </div>
+                <div id="hd-search-ico">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid hidish">
+        <div class="ihh">
+            <div class="hd-3">
+                <ul class="hover">
+                    <li>ELEKTRONİKA</li>
+                    <li>KOMPÜTERLƏR</li>
+                    <li>OYUNLAR</li>
+                    <li>FOTO VƏ VİDEO</li>
+                    <li>MƏİŞƏT AVADANLIQLARI</li>
+                    <li>PARFÜM VƏ KOSMETİKA</li>
+                    <li>EV ƏŞYALARI</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container hover-menu">
+        <div class="row">
+            <div class="subcategories col-md-4">
+                <ul>
+                    <li class="subcategory">Telefon</li>
+                    <li class="subcategory">Mobil aksessuarlar</li>
+                    <li class="subcategory">TV və audio</li>
+                </ul>
+            </div>
+            <div class="subcategoryitems col-md-8">
+                <div class="row">
+                    <div class="subcategoryitem col-md-3">
+                        <p class="subcategoryitemname">Iphone</p>
+                        <div>
+                            <img src="551.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="subcategoryitem col-md-3">
+                        <p class="subcategoryitemname">Samsung</p>
+                        <div>
+                            <img src="551.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="subcategoryitem col-md-3">
+                        <p class="subcategoryitemname">Nokia</p>
+                        <div>
+                            <img src="551.jpg" alt="photo">
+                        </div>
+                    </div>
+                    <div class="subcategoryitem col-md-3">
+                        <p class="subcategoryitemname">Huawei</p>
+                        <div>
+                            <img src="551.jpg" alt="photo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<body>
+    <main class="specmain container">
+        <div class="row">
+            <div class="prod-img col-md-4">
+                <div class="main-img">
+                    @{
+                        foreach (var item in Model)
+                        {
+                            <img src="~/img/@item.MainPhoto" alt="photo">
+                        }
+                    }
+                </div>
+                <div class="mini-imgs container">
+                    <div class="row">
+                        @{
+                            foreach (var item in Model)
+                            {
+                                foreach (var item2 in item.Photos)
+                                {
+                                    <div class="mini-img col-md-3">
+                                        <img src="~/img/@item2.Path" alt="photo">
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="prod-chars col-md-8">
+                <h4>Apple iPhone 11 Dual SIM 64GB Black</h4>
+                <div class="nesenese">
+                    @{
+                        foreach (var item in Model)
+                        {
+                            decimal saleprice = item.Price - (item.Price * item.SalePercent / 100);
+                            <p class="price">@saleprice.</p>
+                        }
+                    }
+                    <div class="prod-char container-fluid">
+                        <div class="row">
+                            <div class="left col-md-4">
+                                <ul>
+                                    <li>Vəziyyəti:</li>
+                                    <li>Göndəriş</li>
+                                    <li>Çatdirilma</li>
+                                    <li>Zəmanət</li>
+                                </ul>
+                            </div>
+                            <div class="right col-md-8">
+                                <ul>
+                                    @{
+                                        foreach (var item in Model)
+                                        {
+                                            <li>@item.Condition</li>
+                                            <li>@item.ShipDate gün</li>
+                                            <li>$ @item.ShipPrice в Azərbaycan</li>
+                                            <li>Yoxlamaq üçün @item.TestDate gün</li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-part container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button class="btn-default">ALMAQ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="container specifications">
+        <h4>SPESIFIKASIYA</h4>
+        <div class="row">
+            <div class="aska col-md-4">
+                <ul>
+                    @{ 
+                        foreach (var item in ViewBag.Properties)
+                        {
+                            <li>@item</li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="aska col-md-8">
+                <ul>
+                    @{
+                        foreach (var item in ViewBag.PropertyValues)
+                        {
+                            <li>@item</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>

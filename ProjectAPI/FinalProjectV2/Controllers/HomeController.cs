@@ -9,6 +9,7 @@ using FinalProjectV2.Models;
 using ProjectAPI.Data.Entities;
 using ProjectAPI.Data;
 using FinalProjectV2.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalProjectV2.Controllers
 {
@@ -38,7 +39,7 @@ namespace FinalProjectV2.Controllers
             ViewModel model = new ViewModel();
             model.Products = _dbContext.Products.ToList();
             model.Contacts = _dbContext.Contacts.ToList();
-            model.Categories = _dbContext.Categories.ToList();
+            model.Categories = _dbContext.Categories.Include("SubCategories").ToList();
             model.SubCategories = _dbContext.SubCategories.ToList();
             model.SubCategoryItems = _dbContext.SubCategoryItems.ToList();
             model.Socials = _dbContext.Socials.ToList();

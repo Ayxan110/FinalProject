@@ -142,12 +142,15 @@ ul {
 }
 
 .hidish .ihh ul {
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
 }
 
 .hidish .ihh ul li {
+  text-align: center;
   padding: .4em;
   color: #f8ffff;
   border-left: 1px solid #999999;
@@ -492,4 +495,109 @@ ul {
   -webkit-transition-duration: .4s;
           transition-duration: .4s;
 }
-/*# sourceMappingURL=style.css.map */
+.specmain {
+    padding: 1em;
+}
+.specmain img {
+        width: 100%;
+}
+
+    .specmain .prod-img .main-img {
+        border: 1px solid #e9e9e9;
+    }
+
+        .specmain .prod-img .main-img:hover {
+            border: 1px solid #cd2127;
+        }
+
+    .specmain .prod-img .mini-imgs {
+        margin-top: 1em;
+        padding: .5em;
+    }
+
+        .specmain .prod-img .mini-imgs .mini-img {
+            padding: .1em;
+            border: 1px solid #e9e9e9;
+        }
+
+            .specmain .prod-img .mini-imgs .mini-img:hover {
+                border: 1px solid #cd2127;
+            }
+
+    .specmain .prod-chars .nesenese {
+        padding: 1em;
+    }
+
+        .specmain .prod-chars .nesenese h4 {
+            padding: .4em;
+            font-weight: 400;
+            border-bottom: 1px solid #e9e9e9;
+        }
+
+        .specmain .prod-chars .nesenese .price {
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .specmain .prod-chars .nesenese .prod-char {
+            background-color: #f5f5f5;
+            padding: .5em;
+        }
+
+            .specmain .prod-chars .nesenese .prod-char .left ul {
+                padding: 0;
+            }
+
+                .specmain .prod-chars .nesenese .prod-char .left ul li {
+                    padding: .4em;
+                    color: #828282;
+                }
+
+            .specmain .prod-chars .nesenese .prod-char .right ul {
+                padding: 0;
+            }
+
+                .specmain .prod-chars .nesenese .prod-char .right ul li {
+                    padding: .4em;
+                    color: #666;
+                    font-weight: 600;
+                }
+
+        .specmain .prod-chars .nesenese .btn-part {
+            margin-top: 2em;
+        }
+
+            .specmain .prod-chars .nesenese .btn-part button {
+                width: 100%;
+                background-color: #cd2127;
+                color: #fff;
+                border: none;
+                height: 2em;
+                font-weight: 600;
+            }
+
+            .specmain .prod-chars .nesenese .btn-part img {
+                width: 100%;
+            }
+
+.specifications h4 {
+    font-weight: 400;
+}
+
+.specifications .row {
+    margin-top: 1em;
+}
+
+    .specifications .row .aska {
+        padding: 0;
+    }
+
+        .specifications .row .aska ul {
+            padding: 0;
+            border: 1px solid #e9e9e9;
+        }
+
+            .specifications .row .aska ul li {
+                border-bottom: 1px solid #e9e9e9;
+                padding-left: 1em;
+            }
